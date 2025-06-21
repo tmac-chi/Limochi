@@ -14,4 +14,15 @@
       "dest": "/client/$1"
     }
   ]
+  "builds": [
+    {
+      "src": "client/index.html",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "client/dist",
+        "buildCommand": "npm run build --workspace client"
+      }
+    }
+  ],
+  "installCommand": "npm install"
 }
