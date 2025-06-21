@@ -1,7 +1,9 @@
 {
   "functions": {
     "server/index.ts": {
-      "runtime": "@vercel/node@3.0.18"
+      "runtime": "@vercel/node@3.0.18",
+      "memory": 1024,
+      "maxDuration": 10
     }
   },
   "routes": [
@@ -13,5 +15,7 @@
       "src": "/(.*)",
       "dest": "/client/$1"
     }
-  ]
+  ],
+  "installCommand": "npm install",
+  "buildCommand": "npm run build"
 }
