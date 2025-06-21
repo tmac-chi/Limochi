@@ -13,7 +13,7 @@
       "src": "/(.*)",
       "dest": "/client/$1"
     }
-  ]
+  ],
   "builds": [
     {
       "src": "client/index.html",
